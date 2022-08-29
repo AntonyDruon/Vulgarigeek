@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Gestion des application{% endblock %}
+
+{% block body %}
+
+<pre>
+    {# {{ dump(application) }} #}
+</pre>
+
+<a href="{{ path('app_admin_newapplication') }}" class=" btn btn-success mb-3"> Ajouter une application</a>
+<table class="table table-bordered text-center">
+
+
+    <thead>
+        <tr>
+            {% for colonne in colonnes %}
+            <th>{{ colonne }}</th>
+
+            {% endfor %}
+            
+            <th>Editer</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    {#  le titre des colonnes du tableau sera le nom des champs de l'entity Article #}
+    <tbody>
+    {% for application in applications %}
+    <tr>
+    <td>{{ application.id }}</td>
+    <td>{{ application.titre }}</td>
+    <td>{{ application.description }}</td>
+    <td><img src=" {{ asset('image/article/' ~ application.image) }}" alt="Image de l'application" style="width: 150px;"></td>
+    {# <td>{{ application.datedecreation|date("d/m/Y à H:i:s") }}</td> 
+    <td>{{ application.dateedition|date("d/m/Y à H:i:s") }}</td> #}
+    <td><a href="{{path('app_admin_editapplication', {id: application.id}) }}"class="btn btn-warning "><i class="fas fa-edit"></i></a></td>
+    <td><a href="{{path('delete_application', {id: application.id})}}"class="btn btn-danger "><i class="fas fa-trash-alt"></i></a></td>
+    
+    
+    </tr>
+        
+    {% endfor %}
+    
+    </tbody>
+
+
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Gestion des logiciels{% endblock %}
+
+{% block body %}
+
+<pre>
+    {# {{ dump(logiciel) }} #}
+</pre>
+
+<a href="{{ path('app_admin_newlogiciel') }}" class=" btn btn-success mb-3"> Ajouter un logiciel</a>
+<table class="table table-bordered text-center">
+
+
+    <thead>
+        <tr>
+            {% for colonne in colonnes %}
+            <th>{{ colonne }}</th>
+
+            {% endfor %}
+            
+            <th>Editer</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    {#  le titre des colonnes du tableau sera le nom des champs de l'entity Article #}
+    <tbody>
+    {% for logiciel in logiciels %}
+    <tr>
+    <td>{{ logiciel.id }}</td>
+    <td>{{ logiciel.titre }}</td>
+    <td>{{ logiciel.description }}</td>
+    <td><img src=" {{ asset('image/article/' ~ logiciel.image) }}" alt="image du logiciel" style="width: 150px;"></td>
+    
+    <td><a href="{{path('app_admin_editlogiciel', {id: logiciel.id}) }}"class="btn btn-warning "><i class="fas fa-edit"></i></a></td>
+    <td><a href="{{path('delete_logiciel', {id: logiciel.id})}}"class="btn btn-danger "><i class="fas fa-trash-alt"></i></a></td>
+    
+    
+    </tr>
+        
+    {% endfor %}
+    
+    </tbody>
+
+
+</table>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+{% block title %}BACKOFFICE | Application{% endblock %}
+
+{% block body %}
+<br>
+<hr>
+<main>
+    <h3 class="display-4 text-center my-4">
+
+    {% if editMode %}
+
+    BACKOFFICE | Modification de l'application
+    {% else %}
+    BACKOFFICE | Ajout d'une application
+
+    {% endif %}
+    </h3>
+    {{ form_start(formApplication) }}
+    {{ form_row(formApplication.titre) }}
+    {{ form_row(formApplication.description) }}
+
+    {{ form_row(formApplication.imageFile, {
+        label: 'Image'
+    })}}
+
+    <button type="submit" class="btn btn-primary">
+
+    {% if editMode %}
+        Enregistrer les Modifications
+    {% else %}
+        Ajouter l'application
+    {% endif %}
+
+
+
+    </button>
+    {{ form_end(formApplication) }}
+</main>
+<hr>
+<br>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block title %}Liste des Articles{% endblock %}
+{% block body %}
+
+<h3>Liste des <span>Articles</span>:</h3>
+
+        <section>
+            {% for article in articles %}
+            {# la variable article est declare au moment du for, c'est une varaible de reception : elle va receptionner un article par tour de boucle. 
+            la variable articles correspond a l'indice 'articles' du tableau de paramètres de la méthode render() dans la méthode index() du fichier BlogController.php #}
+
+                
+                <article class="blocarticle">
+
+                    <div class="imageposition">
+                        <img src="{{ asset('image/article/' ~ article.image) }}" alt="l'image de l'article" class="img-fluid">
+                    </div>
+
+                    
+                    {# synthaxe TWIG : la propriété $title de la classe article est privé. Symfony essaye d'y acceder, puis fait appel au getter pour pouvoir y acceder#}
+
+                    
+                    {# createdAt est un objet dateTime, il n'est pas possible de l'afficher tel quel. Nous devons utiliser un filtre twig qui va convertir l'objet DateTime en une chaine de caractères #}
+                    {# <div class="placementcolumntitre"> #}
+                    <div class="placementtitre">
+                           <a href="{{ path('app_article', {'id': article.id})}}"><h4>{{article.titre}}</h4></a> 
+                        </div>
+                    {# <div class="texteliste">
+                        
+                        {# <div class="metadata">Ecrit le {{ article.datedecreation|date("d/m/Y à H:i:s") }} </div> #}
+
+                        {# {{ article.contenu|raw }} #}
+                        {#le filtre raw permet d'interpreter les balises html lors de l'affichage#}
+
+                        
+                        {# path() est une fonction twig permettant de generer un lien vers une route grace au nom de cette route #}
+                        {# pour ouvoir générer un lien vers la route blog_show, nous avons besoin d'un paramletre : l'id de l'article (voir la route dans BlogController.php) #}
+                    {# </div> #}
+                    {# </div> #} 
+                    {# <div class="placementbtn">
+                        <a href="{{ path('app_article', {'id': article.id})}}" class="btn btn-primary">Lire la suite</a>
+                    </div> #}
+                    
+                </article>
+                <hr>
+            {% endfor %}
+        </section>
+
+
+{% endblock %}

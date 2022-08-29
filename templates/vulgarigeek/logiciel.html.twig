@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{logiciel.titre}}{% endblock %}
+
+{% block body %}
+
+    <section class="row articles">
+
+
+        <article>
+            <br>
+            <h4>{{ logiciel.titre }}</h4>
+            {# <div class="metadata">Ecrit le {{article.datedecreation|date("d/m/Y à H:i:s") }}</div> #}
+            <hr>
+            <div class="placementimagelogiciel">
+                <img src="{{ asset('image/article/' ~ logiciel.image) }}" alt="l'image du logiciels" class="img-fluidlogiciel">
+                
+            </div>
+            <div class="placementcontenuarticle">
+                {{ logiciel.description|raw }}
+            </div>
+        </article>
+        <hr>
+    </section>
+    <div class="bloccommentaire">
+        <h3 class="text-center mx-auto m-3">Commentaires</h3>
+
+        <section class="col-md-10 mx-auto">
+
+        {% for commentairelogiciel in logiciel.commentairelogiciel %}
+        <div class="comment">
+            <div class="row">
+                <div class="col-md-3">
+                    {{commentairelogiciel.utilisateur.pseudo}} 
+                    (<small>{{ commentairelogiciel.datecreation|date("d/m/Y à H:i:s") }}</small> )
+                </div>
+                <div class="col-md-9">
+                    {{commentairelogiciel.contenu|raw}}
+           
+            </div>
+        </div>
+        <hr>
+
+        {% endfor %}
+
+    </section>
+
+    {% if app.user %}
+    <section class="col-md-10 mx-auto my-3">
+
+        {{ form_start(formCommentairelogiciel) }}
+
+        {{ form_row(formCommentairelogiciel.contenu, {
+        label : "Nouveau commentaire"
+    }) }}
+
+        <button type="submit" class="btn btn-primary my-2">Valider le commentaire</button>
+
+        {{ form_end(formCommentairelogiciel) }}
+
+    </section>
+    {% else %}
+    <p> Vous ne pouvez pas poster de commentaires, <a href="{{path('app_login')}}">connectez-vous</a> !</p>
+    {% endif %}
+    </div>
+    {% endblock %}

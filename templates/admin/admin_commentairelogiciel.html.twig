@@ -1,0 +1,48 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Gestion des Commentaireslogiciel{% endblock %}
+
+{% block body %}
+<br>
+<hr>
+{# <pre>
+    {{ dump(comments) }}
+</pre> #}
+{# <a href="{{ path('admin_new_comment') }}" class=" btn btn-success mb-3"> Ajouter un commentaire</a> #}
+<table class="table table-bordered text-center">
+<thead>
+    <tr>
+        {% for colonne in colonnes %}
+            <th>{{ colonne }}</th>
+            
+        {% endfor %}
+        <th>Auteur</th>
+        <th>Article</th>
+        {# <th>Editer</th> #}
+        <th>Supprimer</th>
+    </tr>
+
+</thead>
+<tbody>
+{% for commentairelogiciel in commentairelogiciel %}
+    
+
+<tr>
+    <td>{{ commentairelogiciel.id}}</td>
+    <td>{{ commentairelogiciel.contenu}}</td>
+    <td>{{ commentairelogiciel.datecreation|date("d/m/Y à H:i:s") }}</td>
+    <td>{{ commentairelogiciel.utilisateur.pseudo}}</td>
+    <td>{{ commentairelogiciel.logiciel.titre}}</td>
+    {# <td><a href="{{ path('admin_edit_comment', {id:comment.id}) }}"class="btn btn-warning "><i class="fas fa-edit"></i></a></td> #}
+    <td><a href="{{ path('delete_commentairelogiciel', {id:commentairelogiciel.id}) }}"class="btn btn-danger "><i class="fas fa-trash-alt"></i></a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<hr>
+<br>
+
+
+
+
+ {% endblock %}

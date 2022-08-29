@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{article.titre}}{% endblock %}
+
+{% block body %}
+
+    <section class="row articles">
+
+
+        <article>
+            <br>
+            <h4>{{ article.titre }}</h4>
+            
+            <hr>
+            
+            <div class="placementimagearticle">
+                <img src="{{ asset('image/article/' ~ article.image) }}" alt="l'image de l'article" class="img-fluid">
+            </div>
+            <div class="placementcontenuarticle">
+                <p>
+                {{ article.contenu|raw }}
+                </p>
+            </div>
+            <div class="metadata">Ecrit le {{article.datedecreation|date("d/m/Y") }}</div>
+        </article>
+    </section>
+    <hr>
+    <div class="bloccommentaire">
+        <h3 class="text-center mx-auto m-3">Commentaires</h3>
+
+        <section class="col-md-10 mx-auto">
+
+        {% for commentairearticle in article.commentairearticle %}
+        <div class="comment">
+            <div class="row">
+                <div class="col-md-3">
+                    {{commentairearticle.utilisateur.pseudo}} 
+                    (<small>{{ commentairearticle.datecreation|date("d/m/Y à H:i:s") }}</small> )
+                </div>
+                <div class="col-md-9">
+                    {{commentairearticle.contenu|raw}}
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        {% endfor %}
+
+    </section>
+
+    {% if app.user %}
+    <section class="col-md-10 mx-auto my-3">
+
+        {{ form_start(formCommentairearticle) }}
+
+        {{ form_row(formCommentairearticle.contenu, {
+        label : "Nouveau commentaire"
+    }) }}
+
+        <button type="submit" class="btn btn-primary my-2">Valider le commentaire</button>
+
+        {{ form_end(formCommentairearticle) }}
+
+    </section>
+    {% else %}
+    <p> Vous ne pouvez pas poster de commentaires, <a href="{{path('app_login')}}">connectez-vous</a> !</p>
+    {% endif %}
+    </div>
+    {% endblock %}

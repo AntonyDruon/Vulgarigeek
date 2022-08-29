@@ -1,0 +1,764 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+
+body{
+    max-width: 1518px;
+    height: 100%;
+    background-color: #42667C;
+    margin: auto;
+    padding: 0;
+    
+}
+hr{
+    border:none;
+    opacity: 1;
+    background-color: #d1d1d1;
+    margin: 20px 0px 20px 0px;
+}
+section{
+    /* border: 1px solid red; */
+    margin: 0px 0px 40px 0px;
+}
+/* ******************************************BARRE DE NAVIGATION***************************************** */
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 1261px; */
+    height: 79px;
+    background-color: #182c49;
+}
+.nav1{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: rgb(5, 9, 237) solid 2px; */
+    width: 578px;
+    height: 29px;
+}
+.nav2{
+    font-size: 20px;
+    font-family: 'Roboto', 'regular';
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: red solid 2px; */
+    width: 247px;
+    height: 23px;
+    
+}
+.logo{
+    width: 217px;
+    height: 47px;
+}
+a:-webkit-any-link {
+    color: #d1d1d1;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover{
+    color: #FAFF00;
+}
+/* ******************************************background + titre navigation ***************************************** */
+.backgroundimg{
+    background-image: url(../image/banniereheader.jpg);
+    background-size: contain;
+    height: 457px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 15px 15px;
+    /* box-shadow: 0px 5px 5px 0px #2c3947; */
+    
+    /* border-radius: 0px 0px 15px 15px; */
+}
+h1{
+    width: 561px;
+    height: 150px;
+    margin: 0;
+    /* border: #FAFF00 2px solid; */
+    color: #FAFF00;
+    background-color: #457B9D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #324156;
+}
+
+main{
+    background-color: #42667C;
+    height: 100%;
+    /* border-radius: 5%;   */
+}
+/* ******************************************footer ***************************************** */
+footer{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 76px;
+    /* width: 1518px; */
+    background-color: #182c49;
+    border-radius: 15px 15px 0px 0px;
+    /* position:absolute;
+    bottom:0; */
+}
+.logofooter{
+width: 259px;
+height: 61px;
+}
+
+.copyright{
+    width: 325px;
+    height: 19px;
+    color: #0973AF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.rsociaux{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 22px;
+}
+.fa-brands{
+    color:#d1d1d1;
+}
+.renseignement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 28px;
+    color: #d1d1d1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-left: #d1d1d1 2px solid;
+    gap: 13px;
+}
+.pseudo{
+    margin: 5px;
+    color: #FAFF00;
+    /* text-decoration: underline; */
+    background-color: #457B9D;
+    border-radius: 15px;
+    width: 180px;
+    text-align: center;
+}
+.fa-solid{
+    width: 22px;
+    height: 22px;
+}
+/* ******************************************Inscription***************************************** */
+.placementinscription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+.blocinscription{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    width: 909px;
+    height: 772px;
+    background-color: #D9D9D9;
+    color: #577898;
+    border-radius: 15px;
+}
+.placementform{
+    /* border: 2px solid yellow; */
+    width: 500px;
+    height: 500px;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.form-control{
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px #889fb6;
+    background-color: #FFF5F5;
+    margin: 0px 0px 10px;
+}
+.bouton{
+    
+    background-color: #FFF5F5;
+    border-radius: 15px;
+    color: #577898;
+    box-shadow: 0px 4px 4px 0px #889fb6;
+}
+/* ******************************************Connexion***************************************** */
+.placementconnexion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+.blocconnexion{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+    width: 909px;
+    height: 772px;
+    background-color: #D9D9D9;
+    color: #577898;
+    border-radius: 15px;
+}
+.placementformconnexion{
+    /* border: 2px solid yellow; */
+    width: 500px;
+    height: 300px;
+}
+.placementlabel{
+    margin: 0px 0px 8px;
+}
+/* ******************************************Contact***************************************** */
+.placementcontact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bloccontact{
+    display: flex;
+    background-color: #D9D9D9;
+    margin: 50px;
+    height: 555px;
+    width: 100%;
+    border-radius: 15px;
+}
+.taillecontact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 2px green solid; */
+    width: 70%;
+}
+.formcontact{
+    width: 70%;
+    color: #577898;
+    /* border: #FAFF00 2px solid; */
+}
+.placementboutoncontact{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: #182c49 2px solid; */
+    width: 70%;
+}
+.boutoncontact{
+    width: 150px;
+    background-color: #FFF5F5;
+    border-radius: 15px;
+    color: #577898;
+    box-shadow: 0px 4px 4px 0px #889fb6;
+}
+.placementcadran{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+.cadranbleu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    /* border: 2px blue solid; */
+    width: 70%;
+    height: 80%;
+    border-radius: 15px;
+    background-color: #577898;
+    box-shadow: 0px 4px 4px 0px #889fb6;
+}
+.logotete{
+    
+    height: 230px;
+    width: 100%;
+    border-radius: 15%;
+    /* border: #FFF5F5 2px solid; */
+}
+.textcadranbleu{
+    font-family: 'Roboto', sans-serif;
+    width: 230px;
+    color: #d1d1d1;
+    /* border: #FAFF00 2px solid; */
+}
+.signaturecadranbleu{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #000000;
+    width: 230px;
+    /* border: #000000 2px solid; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nomargin{
+    margin: 0px;
+}
+
+/* ******************************************Accueil***************************************** */
+
+/* Presentation du site */
+h3{
+    /* text-align: center; */
+    /* border: #FFF5F5 solid 2px; */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    text-decoration: underline;
+    margin: 40px 0px 40px 0px;
+    color: #d1d1d1;
+}
+.placementbloc1{
+    display: flex;
+    
+}
+.placementtexte{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    width: 60%;
+    color: #d1d1d1;
+}
+.placementimage{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.imagebitcoin{
+box-shadow: 0px 4px 4px 0px #2c3947;
+   width: 402px;
+   height: 220px;
+   object-fit: cover;
+   border-radius: 15px;
+}
+span{
+    color: #FAFF00;
+    text-decoration: underline;
+}
+
+/* Qui suis-je? */
+
+.placementbloc2{
+    display: flex;
+    
+}
+.placementtexte2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    width: 60%;
+    color: #d1d1d1;
+}
+.placementphotopresentation{
+    /* border: solid 2px yellow; */
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cadranbleuaccueil{
+    /* border: solid 2px rgb(77, 27, 83); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #577898;
+    box-shadow: 0px 4px 4px 0px #2c3947;
+}
+.JeanAllainphoto{
+    border-radius: 15px;
+    
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* cadeau hebdomadaire */
+.placementbloc3{
+    display: flex;
+    margin-bottom: 50px;
+    /* border: #000000 2px solid; */
+}
+.placementimageapplication{
+    /* border: solid 2px yellow; */
+    width: 28%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+
+}
+.imageapplication{
+    /* border: #000000 solid 2px; */
+    box-shadow: 0px 4px 4px 0px #2c3947;
+    width: 402px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.placementtext3{
+    /* border: #ac10d7 solid 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    width: 60%;
+    color: #d1d1d1;
+}
+
+/* *******************************Article + Commentaire************************ */
+.bloccommentaire{
+    /* border: #FAFF00 2px solid; */
+    background-color: #457B9D;
+    color: #d1d1d1;
+    border-radius: 15px;
+}
+/* *******************************liste article************************ */
+
+.blocarticle{
+    height: 200px;
+    /* border: solid 2px rgb(149, 0, 255); */
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.imageposition{
+    display:flex;
+    align-items: center;
+    /* border: #15fd30 2px solid; */
+    width: 25%;
+    height: 80%;
+    border-right: #182c49;
+}
+
+.texteliste{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: solid 2px red; */
+    
+}
+ /* .tailleimage{
+    height: 200px;
+    width: 200px;
+ } */
+
+ .img-fluid{
+    border-radius: 15px;
+    height: 200px;
+    width: 500px;
+    box-shadow: 5px 5px 5px #324156;
+    
+ }
+ /* .placementbtn{
+    border: red solid 1px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ } */
+ h4{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: #FAFF00;
+    text-decoration: underline;
+    
+ }
+ .placementtitre{
+    /* border: #FAFF00 solid 1px; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    margin: 25px;
+ }
+
+ /* *************************************article****************** */
+
+.placementimagearticle{
+    /* border: #FAFF00 solid 2px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.placementcontenuarticle{
+    color: #d1d1d1;
+    /* border: red solid 2px; */
+    width: 100%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.metadata{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #d1d1d1;
+}
+.encochedeblockchain{
+    padding: 15px;
+    margin: 20px;
+    width: 50%;
+    border: thick double #2c3947 ;
+    background-color: #182c49;
+    box-shadow: 2px 2px 2px #324156;
+    
+}
+.textblockchain{
+    /* & */
+    width: 75%;
+    /* border: rgb(90, 46, 46) 1px solid; */
+}
+
+/* *******************************LISTE LOGICIEL************************ */
+
+.bloclogiciel {
+    height: 200px;
+    /* border: solid 2px rgb(149, 0, 255); */
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+.placementelements{
+    /* border: #D9D9D9 solid 2px; */
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.placementtitrelogiciel{
+    align-self: flex-start;
+    /* border: #000000 solid 2px; */
+}
+.placementbtnlogiciel{
+    align-self: center;
+    /* border: #d1d1d1 solid 2px; */
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.placementdescription{
+    /* border: #FAFF00 solid 2px; */
+    height: 40%;
+    color: #d1d1d1;
+    font-family: 'Roboto', sans-serif;
+}
+.img-fluidlogiciel{
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    /* border: #FAFF00 solid 2px; */
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #324156;
+}
+.imagepositionlogiciel{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* border: #15fd30 2px solid; */
+    width: 15%;
+    height: 100%;
+    border-right: #d1d1d1 0.5px solid;
+    border-radius: 2px;
+}
+.btnlogiciel{
+    text-align: center;
+    /* border: #15fd30 2px solid; */
+    background-color: #577898;
+    border-radius: 15px;
+    width: 150px;
+    color: #d1d1d1;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 2px 2px 2px #324156;
+    margin: 5px;
+}
+.placementimagelogiciel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    /* border: #FAFF00 solid 2px; */
+    width: 100%;
+}
+
+/* *******************RESPONSIVE********************************** */
+
+@media screen and (max-width: 1512px) and (min-width: 1024px){ 
+    .placementtext3{
+        margin: 20px;
+    }
+    body{
+        width: 100%;
+        margin: 0;
+    }
+    .imagepositionlogiciel{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 1352px) {
+    .blocarticle{
+        flex-direction: column;
+        box-sizing: border-box;
+        height: 300px;
+    }
+    .placementtitre{
+        justify-content: center;
+    }
+    h3{
+        text-align: center;
+        margin: 20px
+    }
+    
+}
+@media screen and (max-width: 1144px) {
+        nav{
+            flex-direction: column;
+            height: 200px;
+        }
+        .nav1{
+            margin: 4px;
+        }
+        .nav2{
+            margin: 4px;
+        }
+        footer{
+            flex-direction: column;
+            height: 200px;
+        }
+        .renseignement {
+            border: none;
+        }
+        .contact{
+            border-right: 1px solid #d1d1d1;
+            padding-right: 10px;
+        }
+    
+}
+@media screen and (max-width: 1024px)  { 
+    
+    .placementbloc1{
+        flex-direction: column-reverse;
+    }
+    .placementbloc3{
+        flex-direction: column;
+       
+
+    }
+    .placementtexte{
+        width: 100%;
+    }
+    .placementimage{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .placementimageapplication{
+        width: 100%;
+        justify-content: center;
+         align-items: center;
+         margin-bottom: 20px;
+        
+    }
+    .placementtext3{
+        width: 100%
+    }
+    .cadranbleuaccueil{
+        width: 50%;
+        height: 80%;
+    }
+    /* .blocarticle{
+        flex-direction: column;
+        box-sizing: border-box;
+        height: 300px;
+    } */
+    
+   .placementtitrelogiciel{
+        align-self: center;
+    }
+    .imagepositionlogiciel{
+        width: 300px;
+    }
+    .logotete{
+        width: 180px;
+        height: 180px;
+    }
+    .textcadranbleu{
+        width: 100%;
+        text-align: center;
+    }
+    .imageposition{
+        width: 250px;
+    }
+
+    
+}
+
+@media screen and (max-width: 768px) { 
+    
+    .bloclogiciel{
+        flex-direction: column;
+        height: 400px;
+        gap: 0px;
+    }
+    .imagepositionlogiciel{
+        height: 50%;
+        border: none;
+        width: 100%;
+    }
+    .placementelements{
+        height: 400px;
+        width: 80%;
+        margin: 0;
+    }
+    .placementtitrelogiciel{
+        margin: 0px;
+        height: 10%;
+    }
+    .placementdescription{
+        width: 100%;
+    }
+    /* .placementbtnlogiciel{
+
+    } */
+}
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{asset('css/style.css')}}">        
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img class="logo" src="{{asset('image/logovulgarigeek.png')}}" alt="logo du site vulgarigeek">
+                <div class="nav1">
+                        <a href="{{path('app_vulgarigeek')}}">ACCUEIL</a>  
+                        <a href="{{path('app_articles')}}">ARTICLES</a> 
+                        <a href="{{path('app_logiciels')}}">LOGICIELS</a> 
+                        <a href="{{path('app_applications')}}">APPLICATIONS</a> 
+                </div>
+                        {% if is_granted('ROLE_ADMIN') %}
+                        <a style="background-color: #FAFF00; color: black"href="{{path('app_admin')}}">BACKOFFICE</a>
+                        {% endif %}
+                <div class="nav2">
+                        
+                        {% if app.user %}
+                        <p class="pseudo">{{ app.user.pseudo }}</p>
+                        <a href="{{path('app_logout')}}"><i class="fa-solid fa-arrow-right-from-bracket fa-2x" style="color: #FAFF00"></i></a> 
+                        {% else %}
+                        <a href="{{path('app_register')}}">INSCRIPTION</a> 
+                        <a href="{{path('app_login')}}">CONNEXION</a>
+                        {% endif %}
+                        
+                </div>
+            </nav>
+            <div class="backgroundimg">
+                    <h1>VULGARIGEEK</h1>
+            </div>
+        </header>
+
+        {% block body %}
+        {% endblock %}
+
+        <footer>
+            <img class="logofooter" src="{{asset('image/logovulgarigeek.png')}}" alt="logo du site vulgarigeek">
+            <div class="copyright">© 2022 Vulgarigeek Co., Tous droits réservés</div>
+            <div class="rsociaux">
+                <a href="#"><i class="fa-brands fa-facebook-square fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            </div>
+            <div class="renseignement">
+                <a href="{{path('app_contact')}}" class="contact">Contact</a>
+                <a href="#" class="mlegal">Mentions Légales</a>
+            </div>
+        
+        </footer>
+
+    </body>
+</html>

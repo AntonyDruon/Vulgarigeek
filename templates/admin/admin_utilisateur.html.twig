@@ -1,0 +1,50 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Gestion des utilisateurs{% endblock %}
+
+{% block body %}
+
+<br>
+<hr>
+{# <a href="{{ path('admin_new_user') }}" class=" btn btn-success mb-3"> Ajouter un Utilisateur</a> #}
+<table class="table table-bordered text-center">
+
+
+    <thead>
+        <tr>
+            {% for colonne in colonnes %}
+            <th>{{ colonne }}</th>
+
+            {% endfor %}
+
+            {# <th>Editer</th> #}
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    {#  le titre des colonnes du tableau sera le nom des champs de l'entity Article #}
+    <tbody>
+        {% for utilisateur in utilisateur %}
+        <tr>
+            <td>{{ utilisateur.id }}</td>
+            <td>{{ utilisateur.email }}</td>
+            <td>
+                {% for role in utilisateur.roles %}
+                {{ role }}<br>
+                {% endfor %}
+            </td>
+            <td>*****</td>
+            <td>{{ utilisateur.pseudo }}</td>
+            <td>X</td>
+             {# <td><a href="{{ path('admin_edit_user', {id: user.id}) }}" class="btn btn-warning "><i class="fas fa-edit"></i></a></td> #}
+             <td><a href="{{path('delete_utilisateur', {id: utilisateur.id}) }}" class="btn btn-danger "><i class="fas fa-trash-alt"></i></a></td> 
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+
+</table>
+<hr>
+<br>
+{% endblock %}

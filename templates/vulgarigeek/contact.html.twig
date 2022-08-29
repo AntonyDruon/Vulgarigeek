@@ -1,0 +1,46 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<main>
+    <div class="placementcontact">
+        <div class="bloccontact">
+            <div class="taillecontact">
+                <div class="formcontact">
+                    
+
+                    <h2>Contact</h2>
+                    {{form_start(formContact)}}
+                    <div class="formdisplay">
+                    {{form_row(formContact.pseudo)}}
+                    </div>
+                    <div class="formdisplay">
+                    {{form_row(formContact.email)}}
+                    </div>
+                    <div class="formdisplay">
+                    {{form_row(formContact.contenu)}}
+                    </div>
+                    
+                    {{form_end(formContact)}}
+                </div>
+                <div class="placementboutoncontact">
+                <button type="submit" class='boutoncontact btn mt-2'>Soumettre</button>
+                </div>
+            </div>
+            <div class="placementcadran">
+                <div class="cadranbleu">
+                    <div class="imagecadranbleu">
+                        <img class="logotete"src="../image/Jean-Allain.jpg" alt="Tête de l'auteur du site">
+                    </div>
+                    <div class="textcadranbleu">
+                    <p>Si tu désires parler techno, si tu as soucis, une question, je serai ravi d'échanger avec toi par mail</p>
+                    </div>
+                    <div class="signaturecadranbleu">
+                    <p class="nomargin">Jean-Allain</p>
+                    <p class="nomargin">Passionné de technologie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

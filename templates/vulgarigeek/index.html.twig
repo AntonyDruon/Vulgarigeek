@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vulgarigeek{% endblock %}
+
+{% block body %}
+<main>
+    <br>
+    
+    <h3>Bienvenue sur <span>Vulgarigeek</span></h3>
+    
+    <div class="placementbloc1">
+        <div class="placementtexte">
+            <div class="text1">
+                <p>Une question à propos d’un concept lié au web? <span>Vulgarigeek</span> est là pour vous aider.<br> 
+                Vous vous demandez  <a href="{{ path('app_article', {'id': 9})}}">“Qu’est-ce que la <span>BLOCKCHAIN</span>”?</a>, 
+                <a href="{{ path('app_article', {'id': 10})}}">“Pourquoi il y a tout cet engouement autour des ><span>NFT’s</span>”?</a> 
+                ou encore <a href="{{ path('app_article', {'id': 11})}}">“Le <span>METAVERSE</span>? ça se mange?”</a></p> 
+            </div>
+            <div class="text2">
+                <p>Vous êtes tombé sur le bon site. 
+                Nous vulgarisons des concepts pour que la majorité puisse comprendre ce dans quoi le monde d’internet se dirige aujourd’hui.</p>
+            </div>
+            <div class="text3">
+                <p>N’est-ce pas magnifique? :)</p>
+            </div>
+        </div>
+        <div class="placementimage">
+            <img class="imagebitcoin" src="../image/imagebitcoin.jpg" alt="Une image representant des bitcoin">
+        </div>
+    </div>
+    <hr>
+    <h3>Qui suis-je?</h3>
+        <div class="placementbloc2">
+            <div class="placementtexte2">  
+                <div class="text4">
+                    <p>Je m’appelle Jean-Allain, j’ai 62 ans et je suis à la retraite. 
+                       J’ai eu l’idée de faire ce site en accompagnement de ma chaine Youtube de <span>vulgarisation geek</span>, je parle de toute mes passions liées à <span>l’informatique</span> sur ma chaine.</p>
+                </div>
+                <div class="text5">
+                    <p>
+                    Un jour, un de mes enfants adolescent comprenait pas tout l’engouement autour des <span>nouvelles technologies</span> à la mode, 
+                    c’est là que j’ai eu l’idée de ma chaine youtube et du site en essayant de lui expliquer avec des mots simples. 
+                    </p>
+                </div>
+                <div class="text6">
+                    <p>
+                        Si vous avez des questions n’hésitez pas, je serai ravi d’échanger avec vous. 
+                    </p>
+                </div>
+            </div>
+            <div class="placementphotopresentation">
+                <div class="cadranbleuaccueil">
+                    <img class="JeanAllainphoto" src="../image/Jean-Allain.jpg" alt="Une image de la tête de Jean-Allain">
+                    <a href="{{path('app_contact')}}" class="contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    <hr>
+    
+    <h3>Hop là... nous avons un <span>cadeau hebdomadaire</span> pour toi!</h3>
+    <br>
+    <div class="placementbloc3">
+        <div class="placementimageapplication">
+            <img class="imageapplication"src="../image/imageapplication.jpg" alt="Une image avec plein de logo d'application">
+        </div>
+        <div class="placementtext3">
+            <div class="text7">
+            <p>Nous te faisons une liste toute les semaines des 5 meilleurs <a href="{{path('app_logiciels')}}"><span>Logiciels</span></a> et <a href="{{path('app_applications')}}"><span>Application pour mobile</span></a>. </p>
+            </div>
+            <div class="text8">
+            Que ce soit les <span>derniers jeux mobile</span> en vogue ou encore les <span>logiciels incontournable</span> pour ton pc, tout sera référencié. 
+            Alors n’hésite pas, peut-être que tu y trouveras ton <span>bonheur..</span> 
+            </div>
+        </div>
+    </div>
+
+</main>
+{% endblock %}

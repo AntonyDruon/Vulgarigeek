@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}BackOffice{% endblock %}
+{% block body %}
+    <h3 style="text-align: center">BACKOFFICE</h3>
+    <hr>
+    <p class="text-center" style="color: #d1d1d1">Bienvenue sur votre BackOffice</p>
+    <a href="{{path('admin_articles')}}" class="col-md-6 offset-md-3 btn btn-dark mb2">GESTION DES ARTICLES</a>
+    <a href="{{path('admin_commentairearticle')}}" class="col-md-6 offset-md-3 btn btn-dark mb2">GESTION DES COMMENTAIRES ARTICLE</a>
+    <a href="{{path('admin_logiciels')}}" class="col-md-6 offset-md-3 btn btn-danger mb2">GESTION DES LOGICIELS</a>
+    <a href="{{path('admin_commentairelogiciel')}}" class="col-md-6 offset-md-3 btn btn-danger mb2">GESTION DES COMMENTAIRES LOGICIEL</a>
+    <a href="{{path('admin_applications')}}" class="col-md-6 offset-md-3 btn btn-info mb2">GESTION DES APPLICATIONS</a>
+    <a href="{{path('admin_commentaireapplication')}}" class="col-md-6 offset-md-3 btn btn-info mb2">GESTION DES COMMENTAIRES APPLICATION</a>
+    <a href="{{path('admin_utilisateur')}}" class="col-md-6 offset-md-3 btn btn-primary mb2">GESTION DES MEMBRES</a>
+    
+    <br>
+    <hr>
+{% endblock %}

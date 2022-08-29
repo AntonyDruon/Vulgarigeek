@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+
+{% block title %}BACKOFFICE | Articles{% endblock %}
+
+{% block body %}
+<br>
+<hr>
+<main>
+    <h3 class="display-4 text-center my-4">
+
+    {% if editMode %}
+
+    BACKOFFICE | Modification de l'article
+    {% else %}
+    BACKOFFICE | Ajout d'un article
+
+    {% endif %}
+    </h3>
+    {{ form_start(formArticle) }}
+    {{ form_row(formArticle.titre) }}
+    {{ form_row(formArticle.contenu) }}
+
+    {{ form_row(formArticle.imageFile, {
+        label: 'Image'
+    })}}
+
+    <button type="submit" class="btn btn-primary">
+
+    {% if editMode %}
+        Enregistrer les Modifications
+    {% else %}
+        Ajouter l'article
+    {% endif %}
+
+
+
+    </button>
+    {{ form_end(formArticle) }}
+</main>
+<hr>
+<br>
+{% endblock %}

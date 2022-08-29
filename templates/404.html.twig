@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Ressource non trouvée{% endblock %}
+{% block body %}
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Non trouvé !</h1>
+    <p class="col-md-8 fs-4">Malheureusement, la ressource à laquelle vous essayez d'acceder n'existe pas.
+    Cliquez sur le bouton pour revenir à la liste des articles.</p>
+    <a class="btn btn-primary btn-lg" href="{{ path('app_articles') }}">Liste des articles</a>
+    </div>
+</div>
+
+{% endblock %}
